@@ -71,3 +71,29 @@ body {
 .next p:hover {
   cursor: pointer;
 }
+
+.navigation-dots {
+  width: 100%;
+  bottom: 2%;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  position: absolute;
+}
+
+.dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: #e2e8f040;
+
+  border: 1px solid none;
+  border-radius: 50%;
+}
+
+.dot:hover {
+  cursor: pointer;
+}
+
+#current-dot {
+  background-color: #e2e8f0;
+}

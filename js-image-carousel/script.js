@@ -32,3 +32,17 @@ leftArrow.addEventListener("click", () => {
 rightArrow.addEventListener("click", () => {
   moveImages(images, "right");
 });
+
+const navigationDots = document.querySelectorAll(".dot");
+navigationDots.forEach((dot) => {
+  dot.addEventListener("click", () => {
+    const currentDot = document.querySelector("#current-dot");
+    const width = images.offsetWidth;
+    const numOfImages = images.childElementCount;
+    const dotPosition = Array.prototype.slice.call(navigationDots).indexOf(dot);
+    const newPosition = (-1 * dotPosition * width) / numOfImages;
+    images.setAttribute("style", `left: ${newPosition}px`);
+    currentDot && currentDot.removeAttribute("id");
+    dot.setAttribute("id", "current-dot");
+  });
+});

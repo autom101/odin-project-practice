@@ -1,9 +1,6 @@
-const moveImages = (
-  imagesContainer,
-  sumWidthOfImages,
-  numberOfImages,
-  direction
-) => {
+const moveImages = (imagesContainer, direction) => {
+  const numberOfImages = imagesContainer.childElementCount;
+  const sumWidthOfImages = imagesContainer.offsetWidth;
   const oneMovement = sumWidthOfImages / numberOfImages;
   const maxLeft = 0;
   const minRight =
@@ -24,16 +21,14 @@ const moveImages = (
 };
 
 const images = document.querySelector(".wide-div-images");
-const width = 1800;
-const numOfImages = 3;
 
 const leftArrow = document.querySelector(".left-arrow");
 const rightArrow = document.querySelector(".right-arrow");
 
 leftArrow.addEventListener("click", () => {
-  moveImages(images, width, numOfImages, "left");
+  moveImages(images, "left");
 });
 
 rightArrow.addEventListener("click", () => {
-  moveImages(images, width, numOfImages, "right");
+  moveImages(images, "right");
 });

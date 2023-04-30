@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form Validation</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/reset.css">
+        <script src="./script.js" defer></script>
+    </head>
+
+    <body>
+        <!-- Email, Country, Postal Code, Password and Password Confirmation fields.  -->
+        <form action="#" novalidate>
+            <div class="form-row">
+                <label for="e-mail">Email: </label>
+                <input id="e-mail" name="e-mail" type="email" required>
+            </div>
+
+            <div class="form-row">
+                <label for="country">Country: </label>
+                <input id="country" name="country" type="text" minlength="4" maxlength="56" required>
+            </div>
+
+            <div class="form-row">
+                <label for="postal-code">Postal Code: </label>
+                <input id="postal-code" name="postal-code" type="text" minlength="6" maxlength="7"
+                    pattern="^[A-Za-z][0-9][A-Za-z][ -]?[0-9][A-Za-z][0-9]$" required>
+            </div>
+
+            <div class="form-row">
+                <label for="password">Password: </label>
+                <input id="password" name="password" type="password" minlength="8" maxlength="24"
+                    pattern="(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" required>
+            </div>
+
+            <div class="form-row">
+                <label for="confirm-password">Confirm Password: </label>
+                <input id="confirm-password" name="country" type="password" required>
+            </div>
+
+            <div class="submit-button">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </body>
+
+</html>

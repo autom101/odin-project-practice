@@ -36,7 +36,6 @@ body {
 .previous,
 .next {
   position: absolute;
-  opacity: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,14 +48,14 @@ body {
   width: 10%;
   height: 100%;
 
-  background-color: #000000b0;
+  background-color: #00000090;
 
   z-index: 999;
 }
 
 .previous:hover,
 .next:hover {
-  background-color: #00000080;
+  background-color: #00000030;
 }
 
 .previous {

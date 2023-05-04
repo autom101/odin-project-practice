@@ -95,5 +95,3 @@ const replicate = (repetitions, number) => {
     return [number].concat(replicate(repetitions - 1, number));
   }
 };
-
-console.log(replicate(3, 5));

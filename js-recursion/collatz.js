@@ -17,5 +17,3 @@ const collatz = (number) => {
     return collatz(3 * number + 1) + 1;
   }
 };
-
-console.log(collatz(69));

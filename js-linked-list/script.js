@@ -83,7 +83,6 @@ const linkedList = () => {
   const insertAt = (value, index) => {
     const copy = {};
     let listSize = size();
-    let copySize = listSize - index;
     //copy everything from index to tail (to put it back inside list after)
     for (let i = index; i < listSize; i++) {
       copy[i] = linkedList[i];
@@ -100,7 +99,6 @@ const linkedList = () => {
   const removeAt = (index) => {
     const copy = {};
     let listSize = size();
-    let copySize = listSize - index - 1;
     //copy everything after index (to put it back inside list after)
     //index isn't included since it's going to get deleted
     if (index > 0) {
